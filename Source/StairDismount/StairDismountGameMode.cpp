@@ -3,6 +3,7 @@
 #include "StairDismountGameMode.h"
 #include "StairDismountCharacter.h"
 #include "UObject/ConstructorHelpers.h"
+#include "StairDismountController.h"
 
 AStairDismountGameMode::AStairDismountGameMode()
 {
@@ -12,4 +13,6 @@ AStairDismountGameMode::AStairDismountGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+	PlayerControllerClass = AStairDismountController::StaticClass();
+
 }
